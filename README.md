@@ -61,7 +61,7 @@ To get the project on your local machine, run:
 
 ```sh
 git clone https://github.com/Jitendra-Jakkula/ADBatch138.git
-cd smart-inventory-management
+
 ```
 
 ## Backend Setup
