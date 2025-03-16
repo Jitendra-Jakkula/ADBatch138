@@ -50,23 +50,57 @@ A comprehensive inventory management system built with Spring Boot (backend) and
 ## Setup Instructions
 
 ### Prerequisites
-- Java 17 or higher
-- Node.js and npm
-- MySQL Server
+Before starting, make sure you have the following installed:
 
-### Backend Setup
-1. Clone the repository
-2. Configure MySQL database in `backend/src/main/resources/application.properties`
-3. Navigate to the backend directory: `cd backend`
-4. Build the project: `mvn clean install`
-5. Run the application: `mvn spring-boot:run`
-6. The backend server will start on http://localhost:8080
+- [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or higher
+- [Node.js](https://nodejs.org/) and npm
+- [MySQL Server](https://dev.mysql.com/downloads/installer/)
 
-### Frontend Setup
-1. Navigate to the frontend directory: `cd frontend`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm start`
-4. The frontend application will start on http://localhost:3000
+### Clone the Repository
+To get the project on your local machine, run:
+
+```sh
+git clone https://github.com/your-username/smart-inventory-management.git
+cd smart-inventory-management
+```
+
+## Backend Setup
+
+1. Navigate to the backend directory:
+   ```sh
+   cd backend
+   ```
+2. Configure MySQL database in `src/main/resources/application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
+   spring.datasource.username=root
+   spring.datasource.password=yourpassword
+   ```
+3. Build the project:
+   ```sh
+   mvn clean install
+   ```
+4. Run the application:
+   ```sh
+   mvn spring-boot:run
+   ```
+5. The backend server will start on `http://localhost:8080`
+
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```sh
+   cd ../frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm start
+   ```
+4. The frontend application will start on `http://localhost:3000`
 
 ## API Documentation
 
@@ -77,36 +111,46 @@ Authorization: Bearer <your_jwt_token>
 ```
 
 ### Authentication Endpoints
-- `POST /api/auth/signin` - User login
-- `POST /api/auth/signup` - User registration
+```http
+POST /api/auth/signin  # User login
+POST /api/auth/signup   # User registration
+```
 
 ### Item Endpoints
-- `GET /api/items` - Get all items
-- `GET /api/items/{id}` - Get item by ID
-- `POST /api/items` - Create a new item
-- `PUT /api/items/{id}` - Update an item
-- `DELETE /api/items/{id}` - Delete an item
+```http
+GET /api/items          # Get all items
+GET /api/items/{id}     # Get item by ID
+POST /api/items         # Create a new item
+PUT /api/items/{id}     # Update an item
+DELETE /api/items/{id}  # Delete an item
+```
 
 ### Category Endpoints
-- `GET /api/categories` - Get all categories
-- `GET /api/categories/{id}` - Get category by ID
-- `POST /api/categories` - Create a new category
-- `PUT /api/categories/{id}` - Update a category
-- `DELETE /api/categories/{id}` - Delete a category
+```http
+GET /api/categories         # Get all categories
+GET /api/categories/{id}    # Get category by ID
+POST /api/categories        # Create a new category
+PUT /api/categories/{id}    # Update a category
+DELETE /api/categories/{id} # Delete a category
+```
 
 ### Order Endpoints
-- `GET /api/orders` - Get all orders
-- `GET /api/orders/{id}` - Get order by ID
-- `POST /api/orders` - Create a new order
-- `PUT /api/orders/{id}/status` - Update order status
-- `DELETE /api/orders/{id}` - Cancel an order
+```http
+GET /api/orders          # Get all orders
+GET /api/orders/{id}     # Get order by ID
+POST /api/orders         # Create a new order
+PUT /api/orders/{id}/status  # Update order status
+DELETE /api/orders/{id}  # Cancel an order
+```
 
 ### Alert Endpoints
-- `GET /api/alerts` - Get all alerts
-- `GET /api/alerts/{id}` - Get alert by ID
-- `POST /api/alerts/generate` - Generate alerts
-- `PUT /api/alerts/{id}/resolve` - Resolve an alert
-- `PUT /api/alerts/{id}/ignore` - Ignore an alert
+```http
+GET /api/alerts          # Get all alerts
+GET /api/alerts/{id}     # Get alert by ID
+POST /api/alerts/generate # Generate alerts
+PUT /api/alerts/{id}/resolve # Resolve an alert
+PUT /api/alerts/{id}/ignore  # Ignore an alert
+```
 
 ## License
 
@@ -114,4 +158,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contributors
 
-- Your Name - Initial work 
+- Jitendra Jakkula - Initial work
