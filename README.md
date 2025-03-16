@@ -60,7 +60,7 @@ Before starting, make sure you have the following installed:
 To get the project on your local machine, run:
 
 ```sh
-[git clone https://github.com/Jitendra-Jakkula/ADBatch138.git](https://github.com/Jitendra-Jakkula/Smart_inventory_system.git)
+https://github.com/Jitendra-Jakkula/Smart_inventory_system.git
 
 ```
 
