@@ -72,7 +72,7 @@ https://github.com/Jitendra-Jakkula/Smart_inventory_system.git
    ```
 2. Configure MySQL database in `src/main/resources/application.properties`:
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
+   spring.datasource.url=jdbc:mysql://localhost:3306/smart_inventory
    spring.datasource.username=root
    spring.datasource.password=yourpassword
    ```
