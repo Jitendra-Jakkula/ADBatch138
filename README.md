@@ -60,7 +60,7 @@ Before starting, make sure you have the following installed:
 To get the project on your local machine, run:
 
 ```sh
-git clone https://github.com/your-username/smart-inventory-management.git
+git clone https://github.com/Jitendra-Jakkula/ADBatch138.git
 cd smart-inventory-management
 ```
 
